@@ -28,8 +28,9 @@ def user_input_features():
     oldpeak = st.sidebar.number_input(' ST depression induced by exercise relative to rest (oldpeak): ')
     
 
-    data = {'age':age,'bp':bp, 'chol':chol, 'maxhr':maxhr,
-        'oldpeak':oldpeak,}
+    data = {'Age':age,'RestingBP':bp, 'Cholesterol':chol, 'MaxHR':maxhr,
+        'Oldpeak':oldpeak,}
+    #Age	RestingBP	Cholesterol	MaxHR	Oldpeak
     features = pd.DataFrame(data, index=[0])
     #features=StandardScaler().fit_transform(features)
     return features
