@@ -15,7 +15,7 @@ st.title('Heart disease Prediction App')
 st.write("""-- This app predicts a Patient has a heart disease or not --
 
 """)
-st.download_button('Download Sample file link for check', 'https://github.com/ripon2488/heart-disease-prediction-machine-learning/blob/main/heart_disease_dataset.csv')
+#st.download_button('Download Sample file link for check', 'https://github.com/ripon2488/heart-disease-prediction-machine-learning/blob/main/heart_disease_dataset.csv')
 st.sidebar.header('Please Input Features Value')
 
 # Collects user input features into dataframe
@@ -45,7 +45,7 @@ def predict(data):
 
 if st.button("Click here to Predict type of Disease"):
     result = predict(input_df)
-    st.write(result)
+   # st.write(result)
     if (result[0]== 0):
         st.success('The Person does not have a Heart Disease :sunglasses: 	:sparkling_heart:')
         st.balloons()
