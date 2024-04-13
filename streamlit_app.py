@@ -45,7 +45,7 @@ def predict(data):
 
 if st.button("Click here to Predict type of Disease"):
     result = predict(input_df)
-   # st.write(result)
+    st.write(result)
     if (result[0]== 0):
         st.success('The Person does not have a Heart Disease :sunglasses: 	:sparkling_heart:')
         st.balloons()
