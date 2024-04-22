@@ -39,7 +39,7 @@ input_df = user_input_features()
 st.write(input_df)
 
 def predict(data):
-    clf = pickle.load(open(r"final_model_LogR.pkl", 'rb'))
+    clf = pickle.load(open(r"final_model_LogR (1).pkl", 'rb'))
     #joblib.load("model_LogR.sav")
     return clf.predict(data)
 
