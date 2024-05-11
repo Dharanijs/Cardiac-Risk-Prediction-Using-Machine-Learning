@@ -39,14 +39,18 @@ input_df = user_input_features()
 st.write(input_df)
 
 def predict(data):
-    clf = pickle.load(open(r"final_model_LogR (2).pkl", 'rb'))
+
+clf = pickle.load(open(r"final_model.pkl", 'rb'))
+
+clf = pickle.load(open(r"final_model.pkl", 'rb'))
+
     #joblib.load("model_LogR.sav")
-    return clf.predict(data)
+return clf.predict(data)
 
 if st.button("Click here to Predict type of Disease"):
     result = predict(input_df)
     st.write(result)
-    if (result[0]== 0):
+    if (result== 0):
         st.success('The Person does not have a Heart Disease :sunglasses: 	:sparkling_heart:')
         st.balloons()
     else:
